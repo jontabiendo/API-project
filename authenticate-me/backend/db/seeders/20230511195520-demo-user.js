@@ -23,16 +23,22 @@ module.exports = {
 
    await queryInterface.bulkInsert(options, [
     {
+      firstName: 'Jonathan',
+      lastName: 'Tabiendo',
       username: 'JonTabiendo',
       email: 'jontabiendo@gmail.com',
-      hashedPassword: bcrypt.hashSync('AzianSensashion11')
+      hashedPassword: bcrypt.hashSync('Habidosa')
     },
     {
+      firstName: 'Samuel',
+      lastName: 'Tabiendo',
       username: 'IAmATrex',
       email: 'destruction_beetle@hotmail.com',
       hashedPassword: bcrypt.hashSync('CryptoMain#1')
     },
     {
+      firstName: 'David',
+      lastName: 'Tabiendo',
       username: 'DatTabiendo',
       email: 'blueBeetle@yahoo.com',
       hashedPassword: bcrypt.hashSync('blahblahblah')
@@ -52,7 +58,7 @@ module.exports = {
 
     return queryInterface.bulkDelete(options, {
       username: {
-        [Op.in]: ['JonTabiendo']
+        [Op.in]: ['JonTabiendo', 'IAmATrex', 'DatTabiendo']
       }
     }, {})
   }
